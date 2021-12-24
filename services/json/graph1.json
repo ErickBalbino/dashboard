@@ -1,0 +1,22 @@
+[
+    {
+        "mes": "Janeiro",
+        "vendas": 2021
+    },
+    {
+        "mes": "Fevereiro",
+        "vendas": 2033
+    },
+    {
+        "mes": "Março",
+        "vendas": 3004
+    },
+    {
+        "mes": "Abril",
+        "vendas": 1304
+    },
+    {
+        "mes": "Maio",
+        "vendas": 5003
+    }
+]

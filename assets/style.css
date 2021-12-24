@@ -4,6 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 .dashboard{
@@ -81,6 +82,12 @@
     color: #fff;
     font-size: 1.5rem;
     margin-right: 20px;
+    transition: 0.2s ease-in-out background-color;
+}
+
+.body__header__first__section i:hover{
+    color: #ddd;
+    cursor: pointer;
 }
 
 .body__header__first__section input{
@@ -106,6 +113,12 @@
     color: #fff;
     padding: 0px 10px;
     font-size: 1.2rem;
+    transition: 0.2s ease-in-out background-color;
+}
+
+.body__header__second__section i:hover{
+    color: #ddd;
+    cursor: pointer;
 }
 
 .body__cards{
@@ -147,4 +160,17 @@
 
 .body__cards__card i{
     font-size: 3rem;
+}
+
+.body__graphs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    box-sizing: border-box;
+}
+
+.body__graphs__graph{
+    width: 90%;
+    margin: auto;
+    height: 500px;
+    box-sizing: border-box;
 }

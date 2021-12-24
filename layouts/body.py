@@ -1,5 +1,39 @@
 from dash import html
 from dash import dcc
+import plotly_express as px
+import pandas as pd
+
+# COR DOS GRÁFICOS
+color = 'rgb(70, 70, 255)'
+
+# ======== LOAD DATAFRAMES ========
+
+## GRAPH 1  
+df1 = pd.DataFrame({
+        "Mes": ["Janeiro", "Fevereiro", "Março", "Abril", "Maio"],
+        "Vendas": [2022, 1230, 4995, 2004, 2848],
+})
+
+fig1 = px.bar(
+    df1,
+    x="Mes",
+    y="Vendas",
+    color_discrete_sequence=[color]
+)
+
+## GRAPH 2
+df2 = pd.DataFrame({
+        "Mes": ["Janeiro", "Fevereiro", "Março", "Abril", "Maio"],
+        "Lucro": [20192, 30292, 15680, 20484, 12239],
+})
+
+fig2 = px.bar(
+    df2,
+    x="Lucro",
+    y="Mes",
+    color_discrete_sequence=[color]
+)
+
 
 body =  html.Div(children=[
 
@@ -66,6 +100,13 @@ body =  html.Div(children=[
     ], className="body__cards"),
 
     html.Div([
-
+        html.Div([
+            dcc.Graph(id="first-graph", figure=fig1)
+        ], className="body__graphs__graph"),
+        
+        html.Div([
+            dcc.Graph(id="second-graph", figure=fig2)
+        ], className="body__graphs__graph")
     ], className="body__graphs")
 ], className="body")
+

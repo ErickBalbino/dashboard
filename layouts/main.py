@@ -11,7 +11,11 @@ layout = html.Div([
             html.P("Olá, Usuário!", className="panel__image-txt")
         ], className="panel__image"),
         
-        filters
+        filters,
+
+        html.Div([
+            html.Img(src="assets/logo.png", className="panel__logo-img")
+        ], className="panel__logo")
     ], className="panel"),
 
     body
